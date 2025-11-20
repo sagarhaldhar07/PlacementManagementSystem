@@ -1,19 +1,7 @@
 const express = require("express");
-const server = express();
+const app = express();
+const router = require("./route");
 
-const sum = (a, b) => {
-  return a + b;
-};
+app.use("/v1", router);
 
-server.get("/", (req, res) => {
-  res.send("Hello World!");
-});
-
-server.get("/sum", (req, res) => {
-  let a = 2;
-  let b = 3;
-  const result = sum(a, b);
-  res.send(`The sum of ${a} and ${b} is ${result}`);
-});
-
-module.exports = server;
+module.exports = app;

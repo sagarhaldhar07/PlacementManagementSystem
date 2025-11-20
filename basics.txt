@@ -1,0 +1,25 @@
+server.get("/sum", (req, res) => {
+  let a = 2;
+  let b = 3;
+  const result = sum(a, b);
+  res.send(`The sum of ${a} and ${b} is ${result}`);
+});
+
+const sum = (a, b) => { // service
+  return a + b;
+};
+
+route = "/sum";
+controller = (req, res) => { res = call service; send res};
+services = business logic/functional logic
+
+client = frontend, server = backend
+client => route => controller => service => database => result => controller => response => client
+
+// REST APIS
+
+// get
+// post
+// put
+// delete
+// patch

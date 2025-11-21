@@ -5,6 +5,12 @@ const messageCallerController = async (req, res) => {
   res.send(result);
 };
 
+const sumController = async (req, res) => {
+  const result = await serviceHandler.sumService();
+  res.send(result);
+};
+
 module.exports = {
-  messageCallerController
+  messageCallerController,
+  sumController,
 };

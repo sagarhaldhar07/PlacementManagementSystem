@@ -3,6 +3,14 @@ const messageCallerService = async () => {
   return message;
 };
 
+const sumService = async () => {
+  let a = 10;
+  let b = 20;
+  console.log(a + b);
+  return a + b;
+};
+
 module.exports = {
   messageCallerService,
+  sumService,
 };

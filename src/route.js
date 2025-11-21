@@ -4,5 +4,8 @@ const controllerHandler = require("./controller");
 
 router.route("/message").get(controllerHandler.messageCallerController);
 router.route("/sum").get(controllerHandler.sumController);
+router.route("/sub").get(controllerHandler.subController);
+router.route("/mul").get(controllerHandler.mulController);
+router.route("/div").get(controllerHandler.divController);
 
 module.exports = router;

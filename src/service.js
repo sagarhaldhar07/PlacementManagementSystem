@@ -10,7 +10,33 @@ const sumService = async () => {
   return a + b;
 };
 
+const subService = async () => {
+  let a=11;
+  let b=12;
+  console.log(a-b);
+  return a-b;
+};
+
+const mulService = async () => {
+  let a = 2;
+  let b = 5;
+  console.log(a*b);
+  return a*b;
+  
+};
+
+const divService = async () => {
+  let a = 10;
+  let b = 5;
+  console.log(a/b);
+  return a/b;
+  
+}
+
 module.exports = {
   messageCallerService,
   sumService,
+  subService,
+  mulService,
+  divService
 };

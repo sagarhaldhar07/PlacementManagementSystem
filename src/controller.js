@@ -13,23 +13,26 @@ const sumController = async (req, res) => {
 const subController = async (req, res) => {
   const result = await serviceHandler.subService();
   res.send(result);
-  
-}
+};
 const mulController = async (req, res) => {
   const result = await serviceHandler.mulService();
   res.send(result);
-  
-}
+};
 const divController = async (req, res) => {
   const result = await serviceHandler.divService();
   res.send(result);
-  
-}
+};
+
+const sumPostController = async (req, res) => {
+  const result = await serviceHandler.sumPostService(req);
+  res.send(result);
+};
 
 module.exports = {
   messageCallerController,
   sumController,
   subController,
   mulController,
-  divController
+  divController,
+  sumPostController,
 };

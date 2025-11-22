@@ -8,5 +8,8 @@ router.route("/sub").get(controllerHandler.subController);
 router.route("/mul").get(controllerHandler.mulController);
 router.route("/div").get(controllerHandler.divController);
 router.route("/sumPost").post(controllerHandler.sumPostController);
+router.route("/subPost").post(controllerHandler.subPostController);
+router.route("/mulPost").post(controllerHandler.mulPostController);
+router.route("/divPost").post(controllerHandler.divPostController);
 
 module.exports = router;

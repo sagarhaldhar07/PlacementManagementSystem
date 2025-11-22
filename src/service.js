@@ -39,6 +39,30 @@ const sumPostService = async (req) => {
   console.log("Second:", b);
   return a + b;
 };
+const subPostService = async (req) => {
+  console.log("Req Body:", req.body);
+  let a = req.body.first;
+  let b = req.body.second;
+  console.log("first:", a);
+  console.log("Second:", b);
+  return a - b;
+};
+const mulPostService = async (req) => {
+  console.log("Req Body:", req.body);
+  let a = req.body.first;
+  let b = req.body.second;
+  console.log("first:", a);
+  console.log("Second:", b);
+  return a * b;
+}
+const divPostService = async (req) => {
+  console.log("Req Body:", req.body);
+  let a = req.body.first;
+  let b = req.body.second;
+  console.log("first:", a);
+  console.log("Second:", b);
+  return a / b;
+}
 
 module.exports = {
   messageCallerService,
@@ -47,4 +71,7 @@ module.exports = {
   mulService,
   divService,
   sumPostService,
+  subPostService,
+  mulPostService,
+  divPostService
 };

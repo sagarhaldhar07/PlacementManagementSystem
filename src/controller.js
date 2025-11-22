@@ -27,6 +27,18 @@ const sumPostController = async (req, res) => {
   const result = await serviceHandler.sumPostService(req);
   res.send(result);
 };
+const subPostController = async (req, res) => {
+  const result = await serviceHandler.subPostService(req);
+  res.send(result);
+};
+const mulPostController = async (req, res) => {
+  const result = await serviceHandler.mulPostService(req);
+  res.send(result);
+};
+const divPostController = async (req, res) => {
+  const result = await serviceHandler.divPostService(req);
+  res.send(result);
+};
 
 module.exports = {
   messageCallerController,
@@ -35,4 +47,7 @@ module.exports = {
   mulController,
   divController,
   sumPostController,
+  subPostController,
+  mulPostController,
+  divPostController
 };

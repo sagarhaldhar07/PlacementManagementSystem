@@ -64,6 +64,27 @@ const divPostService = async (req) => {
   return a / b;
 }
 
+const hello = async (req) => {
+  console.log("req body :", req.body);
+  let name = req.body.name;
+  console.log("name :", name);
+  let info = `Hello ${name}\nWelcome to the team`;
+  return info;
+  }
+
+const table = async (req) => {
+  console.log("req body :", req.body);
+  let num = req.body.num;
+  let str = "";
+  console.log("num :", num);
+  for(let i =1; i<=10; i++){
+    str = str + `\n${num} X ${i} = ${i*num}`;
+    console.log(str);
+    
+  }
+  return str;
+}
+
 module.exports = {
   messageCallerService,
   sumService,
@@ -73,5 +94,7 @@ module.exports = {
   sumPostService,
   subPostService,
   mulPostService,
-  divPostService
+  divPostService,
+  hello,
+  table
 };

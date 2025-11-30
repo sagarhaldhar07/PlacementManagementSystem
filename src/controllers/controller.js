@@ -1,4 +1,4 @@
-const serviceHandler = require("./service");
+const serviceHandler = require("../services/service");
 
 const messageCallerController = async (req, res) => {
   const result = await serviceHandler.messageCallerService();
@@ -39,6 +39,14 @@ const divPostController = async (req, res) => {
   const result = await serviceHandler.divPostService(req);
   res.send(result);
 };
+const helloPostController = async (req, res) => {
+  const result = await serviceHandler.hello(req);
+  res.send(result);
+};
+const tablePostController = async (req, res) => {
+  const result = await serviceHandler.table(req);
+  res.send(result);
+};
 
 module.exports = {
   messageCallerController,
@@ -49,5 +57,7 @@ module.exports = {
   sumPostController,
   subPostController,
   mulPostController,
-  divPostController
+  divPostController,
+  helloPostController,
+  tablePostController
 };

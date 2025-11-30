@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const router = require("./route");
+const router = require("./routes/route");
 
 // middleware to parse json body
 app.use(express.json());
